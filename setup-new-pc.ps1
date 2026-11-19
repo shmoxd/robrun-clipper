@@ -49,10 +49,9 @@ if (-not $SkipSystemPackages) {
     }
 
     $packages = @(
-        @{ Id = 'Git.Git';              Cmd = 'git'    },
-        @{ Id = 'GitHub.cli';           Cmd = 'gh'     },
-        @{ Id = 'Gyan.FFmpeg';          Cmd = 'ffmpeg' },
-        @{ Id = 'Python.Python.3.12';   Cmd = 'python' }
+        @{ Id = 'Git.Git';     Cmd = 'git'    },
+        @{ Id = 'GitHub.cli';  Cmd = 'gh'     },
+        @{ Id = 'Gyan.FFmpeg'; Cmd = 'ffmpeg' }
     )
 
     foreach ($p in $packages) {
@@ -68,6 +67,27 @@ if (-not $SkipSystemPackages) {
         }
     }
     Refresh-Path
+
+    # The Microsoft Store "python" alias exists even when Python is not installed,
+    # so check the version instead of just the command name.
+    $pythonOk = $false
+    if (Have 'py') {
+        & py -3.12 --version 2>$null | Out-Null
+        $pythonOk = ($LASTEXITCODE -eq 0)
+    }
+    if (-not $pythonOk -and (Have 'python')) {
+        $pythonOk = ((& python --version 2>&1) -join ' ') -match '3\.12'
+    }
+    if ($pythonOk) {
+        Write-Step 'Python.Python.3.12 is already installed'
+    } else {
+        Write-Step 'Installing Python.Python.3.12'
+        winget install --id Python.Python.3.12 -e --source winget --accept-package-agreements --accept-source-agreements --silent
+        if ($LASTEXITCODE -ne 0) {
+            Write-Warning "winget returned $LASTEXITCODE for Python.Python.3.12. Continue if Python 3.12 is actually installed."
+        }
+        Refresh-Path
+    }
 }
 
 if (-not (Test-Path $venvPython)) {
