@@ -1,0 +1,31 @@
+# Local install (not needed on another PC)
+robrun-clipper/.venv/
+**/__pycache__/
+*.pyc
+
+# Runs and generated media
+robrun-workspace/
+robrun-test-run/
+clips/
+downloads/
+parts/
+robrun-clipper/app_renders/
+*.mp4
+*.m4a
+*.mkv
+*.webm
+*.mov
+*.ts
+
+# Local secrets / settings
+*.env
+**/blotato.env
+
+# Bundled tool binaries (install them instead; see bin/README.txt)
+bin/*.exe
+bin/*.dll
+
+# OS junk
+Thumbs.db
+.DS_Store
+*.log

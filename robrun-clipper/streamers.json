@@ -1,0 +1,74 @@
+{
+ "_note": "ROB RUN starter list, seeded once into the workspace. Top ROB RUN channels seen on Twitch on 19 Nov 2026; add or remove yours in the app. confidence = how sure we are the handle is right.",
+ "en": [
+  {
+   "name": "TFUE",
+   "platform": "twitch",
+   "handle": "tfue",
+   "confidence": "high"
+  },
+  {
+   "name": "aceu",
+   "platform": "twitch",
+   "handle": "aceu",
+   "confidence": "high"
+  },
+  {
+   "name": "rakanoolive",
+   "platform": "twitch",
+   "handle": "rakanoolive",
+   "confidence": "medium"
+  },
+  {
+   "name": "olofmeister",
+   "platform": "twitch",
+   "handle": "olofmeister",
+   "confidence": "high"
+  },
+  {
+   "name": "r0o08",
+   "platform": "twitch",
+   "handle": "r0o08",
+   "confidence": "medium"
+  },
+  {
+   "name": "slumbo_",
+   "platform": "twitch",
+   "handle": "slumbo_",
+   "confidence": "medium"
+  }
+ ],
+ "fr": [
+  {
+   "name": "waolol1",
+   "platform": "twitch",
+   "handle": "waolol1",
+   "confidence": "high"
+  },
+  {
+   "name": "twiks",
+   "platform": "twitch",
+   "handle": "twiks",
+   "confidence": "medium"
+  },
+  {
+   "name": "zongoled0z0",
+   "platform": "twitch",
+   "handle": "zongoled0z0",
+   "confidence": "medium"
+  }
+ ],
+ "es": [],
+ "pt": [
+  {
+   "name": "n0vaisj",
+   "platform": "twitch",
+   "handle": "n0vaisj",
+   "confidence": "medium"
+  }
+ ],
+ "de": [],
+ "ar": [],
+ "it": [],
+ "tr": []
+}

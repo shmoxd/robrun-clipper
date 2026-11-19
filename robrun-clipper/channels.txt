@@ -1,0 +1,11 @@
+# One YouTube channel id per line (find it: youtube.com/@handle -> share -> copy channel id). Text after # is a note.
+# A line 'search: <words>' also checks YouTube search, newest uploads first, most viewed picked first.
+search: ROB RUN  # anyone's fresh ROB RUN videos
+search: ROB RUN gameplay  # normal gameplay, heists and police chases
+search: ROB RUN heist  # heist wins and fails
+search: ROB RUN funny moments  # betrayal, ragdoll, wipe-day chaos
+search: ROB RUN police chase  # cop roleplay and escapes
+# Add the YouTube channels you want watched, one id per line, e.g.:
+# UCxxxxxxxxxxxxxxxxxxxxxx  # Streamer name
+# Twitch: last-24h VODs of the top live channels in this category, most viewers first.
+twitch: ROB RUN
